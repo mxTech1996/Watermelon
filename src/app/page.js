@@ -18,11 +18,10 @@ export default function Home() {
   const router = useRouter();
   const { dataSite } = useInformation();
 
-  console.log(dataSite);
   return (
     <main
       style={{
-        backgroundColor: '#DEF8EBFF',
+        backgroundColor: '#E6C898FF',
       }}
     >
       <Navbar />
@@ -40,37 +39,34 @@ export default function Home() {
             color: 'black',
           }}
           withShadowText
-          contentThirdSection={
-            <div
-              style={{ zIndex: 2 }}
-              className='flex flex-col px-48'
-              id='know-us'
-            >
-              <Typography.Title
-                level={3}
-                className='font-medium mb-10 text-center text-white'
-              >
-                Know Us
-              </Typography.Title>
-              <Missions
-                textColor='#fff'
-                data={dataSite.info}
-                gridColumns={1}
-                variant='text'
-              />
-            </div>
-          }
         />
       </div>
       <div className='container mx-auto flex flex-col gap-20 my-24'>
+        <div style={{ zIndex: 2 }} className='flex flex-col px-48' id='know-us'>
+          <Typography.Title
+            level={3}
+            className='font-medium mb-10 text-center text-black'
+          >
+            Know Us
+          </Typography.Title>
+          <Missions
+            textColor='#000'
+            data={dataSite.info}
+            gridColumns={1}
+            variant='text'
+          />
+        </div>
         <div className='flex flex-col' id='our-services'>
           <Typography.Title level={3} className='font-medium mb-10 text-center'>
             Our Services
           </Typography.Title>
           <Features
-            gridColumns={2}
-            variant='card'
-            features={dataSite.services}
+            gridColumns={4}
+            variant='background-img'
+            features={dataSite.services.slice(0, 4)}
+            brightness={7}
+            textColor={'#fff'}
+            borderRadius={40}
           />
         </div>
         <div id='courses'>
@@ -91,7 +87,7 @@ export default function Home() {
                 autoPlay: false,
                 direction: 'horizontal',
               }}
-              backgroundItemColor='#FBFBFB'
+              backgroundItemColor='#FBFBFBFF'
               stylesItem={{
                 borderRadius: 12,
               }}
@@ -112,7 +108,7 @@ export default function Home() {
             }}
             variantItem='card'
             variant='grid'
-            backgroundColor='#CFE5BAFF'
+            backgroundColor='#DAA26AFF'
             references={dataSite.references}
             gridColumns={3}
             titleAlign='center'
