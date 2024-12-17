@@ -74,7 +74,7 @@ export default function Home() {
             <ProductSection
               withCategoryFilter={false}
               title='All Courses'
-              gridColumns={4}
+              gridColumns={3}
               variant='grid'
               productItemVariant='vertical'
               onClickImage={(id) => {
