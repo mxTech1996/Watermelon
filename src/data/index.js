@@ -1,5 +1,5 @@
 export const pageName = 'Watermelon';
-export const primaryColor = '#FF9D2DFF';
+export const primaryColor = '#6AA5FFFF';
 export const backgroundColor = '#FFFFFF';
 export const makeClearBackground = (color) => {
   return {

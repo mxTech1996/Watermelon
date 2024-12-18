@@ -16,8 +16,8 @@ const Navbar = () => {
   return (
     <NavbarV2
       linksProps={{
-        variant: 'button',
-        align: 'center',
+        variant: 'underline',
+        align: 'left',
       }}
       textColor='black'
       withLogo={true}
